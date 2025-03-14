@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0.min.js"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="6916e0db102212c65e769ad74c8b4c5ebfb3d2782c0472a3719b2adb64356f94.html">Llenar Y Enviar Formulario Contactenos En La Pagina De Quipux</a></span>
+                > <span class="truncate-60"><a
+                    href="fd21ce54f0b1bc404e9beed438b472983b60524479766e1fe29a389eea94de9e.html">Llenar el formulario de cntactenos y enviarlo </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 14-03-2025 11:21</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Llenar Y Enviar Formulario Contactenos En La Pagina De Quipux </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="5698da923f295f46ce5ab64ced2311fc60caa4e36b32112606d3adcfdce3f60b.html">30 To 60 Seconds
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Llenar el formulario de cntactenos y enviarlo
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Dado Que me encuentro en la seccion de contactenos en el portal de quipux<br>Cuando lleno los dados &lt;nombreCompleto&gt; &lt;correo&gt; &lt;empresa&gt; '&lt;motivo&gt;' y le doy al boton de enviar<br>Entonces debe aparecer el mensaje de '¡Contáctanos! Nuestro equipo está disponible para responder todas tus preguntas.'</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="8e77c0f19aa8eba7f0530d0e2125d94eed03b2a016ebc8d31a2777de202e9201.png" title=" 1: Llenar el formulario de cntactenos y enviarlo ({nombreCompleto=estoesunaprueba, correo=noContactes@gmail.com, empresa=Quipux, motivo=holaaaaa como estan})" width="0"/>
+                <img src="8e77c0f19aa8eba7f0530d0e2125d94eed03b2a016ebc8d31a2777de202e9201.png" title=" Se&ntilde;or papa inicia el navegador y navega a la pagina" width="0"/>
+                <img src="8e77c0f19aa8eba7f0530d0e2125d94eed03b2a016ebc8d31a2777de202e9201.png" title=" Se&ntilde;or papa opens the browser at https://www.quipux.com/web/" width="0"/>
+                <img src="8e77c0f19aa8eba7f0530d0e2125d94eed03b2a016ebc8d31a2777de202e9201.png" title=" Se&ntilde;or papa inicia el navegador y navega a la pagina (completed)" width="0"/>
+                <img src="791c95fec671d36386537ce8e38a74f18c5bdbeebbb51e847f1c277455c7983a.png" title=" Dado Que me encuentro en la seccion de contactenos en el portal de quipux" width="0"/>
+                <img src="791c95fec671d36386537ce8e38a74f18c5bdbeebbb51e847f1c277455c7983a.png" title=" Se&ntilde;or papa ingresa al formulario de contactenos" width="0"/>
+                <img src="4ad0ef3c90a91f91f300e47bd40cc3cedb6e32f1c7a5e3ca8d127eb92d2996e4.png" title=" Se&ntilde;or papa clicks on Opcion para seleccionar el formulario de contactenos en el portal" width="0"/>
+                <img src="d33d4f0b024b1f6c5019ccf6ce42112430e0f4ee7114f41998d937fb24884df5.png" title=" Se&ntilde;or papa clicks on Opcion para seleccionar el formulario de contactenos en el portal (completed)" width="0"/>
+                <img src="d33d4f0b024b1f6c5019ccf6ce42112430e0f4ee7114f41998d937fb24884df5.png" title=" Se&ntilde;or papa ingresa al formulario de contactenos (completed)" width="0"/>
+                <img src="d33d4f0b024b1f6c5019ccf6ce42112430e0f4ee7114f41998d937fb24884df5.png" title=" Dado Que me encuentro en la seccion de contactenos en el portal de quipux (completed)" width="0"/>
+                <img src="d33d4f0b024b1f6c5019ccf6ce42112430e0f4ee7114f41998d937fb24884df5.png" title=" Cuando lleno los dados estoesunaprueba noContactes@gmail.com Quipux 'holaaaaa como estan' y le doy al boton de enviar" width="0"/>
+                <img src="d33d4f0b024b1f6c5019ccf6ce42112430e0f4ee7114f41998d937fb24884df5.png" title=" Se&ntilde;or papa ingresa los datos en el formulario del contactenos" width="0"/>
+                <img src="d33d4f0b024b1f6c5019ccf6ce42112430e0f4ee7114f41998d937fb24884df5.png" title=" Se&ntilde;or papa enters 'estoesunaprueba' into Input para ingresar el nombre completo" width="0"/>
+                <img src="6fcd7c73831cdc506f82d2c89abed76fd3b464b688d41a349ac593b9413e9d97.png" title=" Se&ntilde;or papa enters 'estoesunaprueba' into Input para ingresar el nombre completo (completed)" width="0"/>
+                <img src="6fcd7c73831cdc506f82d2c89abed76fd3b464b688d41a349ac593b9413e9d97.png" title=" Se&ntilde;or papa enters 'noContactes@gmail.com' into Input para ingresar el correo" width="0"/>
+                <img src="e19d5b554aedac0e51318c87c20745d40ff6dcc2f152efa42524082f9c3dca1f.png" title=" Se&ntilde;or papa enters 'noContactes@gmail.com' into Input para ingresar el correo (completed)" width="0"/>
+                <img src="e19d5b554aedac0e51318c87c20745d40ff6dcc2f152efa42524082f9c3dca1f.png" title=" Se&ntilde;or papa enters 'Quipux' into Input para ingresar la empresa a la que pertenece el usuario" width="0"/>
+                <img src="42c41fba5daeb7917491961b7b62f730d419aee20c2fc64e038259bd5b486405.png" title=" Se&ntilde;or papa enters 'Quipux' into Input para ingresar la empresa a la que pertenece el usuario (completed)" width="0"/>
+                <img src="42c41fba5daeb7917491961b7b62f730d419aee20c2fc64e038259bd5b486405.png" title=" Se&ntilde;or papa enters 'holaaaaa como estan' into TextArea para ingresar el motivo por el cual se esta contactando" width="0"/>
+                <img src="b6ecb9c55db9e259aaa7fd9740bddcdece31b7be9700347892c84ec98f7aee4e.png" title=" Se&ntilde;or papa enters 'holaaaaa como estan' into TextArea para ingresar el motivo por el cual se esta contactando (completed)" width="0"/>
+                <img src="b6ecb9c55db9e259aaa7fd9740bddcdece31b7be9700347892c84ec98f7aee4e.png" title=" Se&ntilde;or papa clicks on Boton para enviar los datos ingresados" width="0"/>
+                <img src="b3f20bca8057a888f428f8b3c9e2ae8db43c1a7146773f238955368669d28393.png" title=" Se&ntilde;or papa clicks on Boton para enviar los datos ingresados (completed)" width="0"/>
+                <img src="b3f20bca8057a888f428f8b3c9e2ae8db43c1a7146773f238955368669d28393.png" title=" Se&ntilde;or papa ingresa los datos en el formulario del contactenos (completed)" width="0"/>
+                <img src="d0b5b44e071bf50f72b47d0fe8636e0f53b4e57b627ea1698fa712e93b5da896.png" title=" Cuando lleno los dados estoesunaprueba noContactes@gmail.com Quipux 'holaaaaa como estan' y le doy al boton de enviar (completed)" width="0"/>
+                <img src="d0b5b44e071bf50f72b47d0fe8636e0f53b4e57b627ea1698fa712e93b5da896.png" title=" Entonces debe aparecer el mensaje de '&iexcl;Cont&aacute;ctanos! Nuestro equipo est&aacute; disponible para responder todas tus preguntas.'" width="0"/>
+
+                <img src="d0b5b44e071bf50f72b47d0fe8636e0f53b4e57b627ea1698fa712e93b5da896.png" title=" Señor papa should see a value that is equal to: <"¡Contáctanos! Nuestro equipo está disponible para responder todas tus preguntas.">: <span class='success-color'>SUCCESS</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 4.0.30</span>
+</div>
+</body>
+</html>
